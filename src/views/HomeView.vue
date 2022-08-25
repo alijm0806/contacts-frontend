@@ -56,8 +56,8 @@ export default {
       console.log(this.currentContact);
       axios.delete("http://localhost:3000/contacts/" + currentContact.id).then(response => {
         console.log(response.data);
-        // var index = this.photos.indexOf(photo);
-        // this.photos.splice(index, 1);
+        var index = this.contacts.indexOf(currentContact);
+        this.contacts.splice(index, 1);
       })
     }
   }
